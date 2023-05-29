@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const [selectedName, setSelectedName] = useState('');
 
+  const handleChange = (event) => {
+    setSelectedName(event.target.value);
+};
+ function App() {
+    return (
+      <div className="App">
+        <div> Student List</div>
+        <label htmlFor="dropdown">Select a name:</label>
+        <select id="dropdown" value={selectedName} onChange={handleChange}>
+          <option value="">Select</option>
+          <option value="Ram">Ram</option>
+          <option value="Ashi">Ashi</option>
+          <option value="Steven">Steven</option>
+          <option value="Anuja">Anuja</option>
+        </select>
+        <p>Selected name: {selectedName}</p>
+      </div>
+    );
+  }
+}
 export default App;
