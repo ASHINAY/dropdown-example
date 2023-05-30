@@ -4,14 +4,14 @@ import './App.css';
 
 function App() {
   const [selectedName, setSelectedName] = useState('');
-  const [selectCondition, setselectCondition] = useState('');
+  const [selectCondition, setSelectCondition] = useState('');
   
   const handleChange = (event) => {
     setSelectedName(event.target.value);
   };
 
-  const valueChange = (event) => {
-    setselectCondition(event.target.value);
+  const onStatusValueChange = (event) => {
+    setSelectCondition(event.target.value);
   };
 
   return (
@@ -23,7 +23,7 @@ function App() {
         <option value="Steven">Steven</option>
         <option value="Anuja">Anuja</option>
       </select>
-      <select value={selectCondition} onChange={valueChange} style={{ width: "100px" }}>
+      <select value={selectCondition} onChange={onStatusValueChange} style={{ width: "100px" }}>
         <option value="Pass">Pass</option>
         <option value="Fail">Fail</option>
       </select>
