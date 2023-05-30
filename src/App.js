@@ -23,7 +23,7 @@ function App() {
         <option value="Steven">Steven</option>
         <option value="Anuja">Anuja</option>
       </select>
-      <label>Status Label</label>
+      <label>Status</label>
       <select value={selectCondition} onChange={onStatusValueChange} style={{ width: "100px" }}>
         <option value="Pass">Pass</option>
         <option value="Fail">Fail</option>
