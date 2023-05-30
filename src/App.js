@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   const [selectedName, setSelectedName] = useState('');
   const [selectCondition, setSelectCondition] = useState('');
-  
+
   const handleChange = (event) => {
     setSelectedName(event.target.value);
   };
@@ -23,6 +23,7 @@ function App() {
         <option value="Steven">Steven</option>
         <option value="Anuja">Anuja</option>
       </select>
+      <label>Status Label</label>
       <select value={selectCondition} onChange={onStatusValueChange} style={{ width: "100px" }}>
         <option value="Pass">Pass</option>
         <option value="Fail">Fail</option>
