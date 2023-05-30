@@ -13,6 +13,10 @@ function App() {
   const onStatusValueChange = (event) => {
     setSelectCondition(event.target.value);
   };
+  const handleClear = () => {
+    setSelectedName('');
+    setSelectCondition('');
+  };
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -36,6 +40,7 @@ function App() {
       >
         Submit
       </button>
+      <button style={{ width: "100px" }} onClick={handleClear}>Clear</button>
     </div>
   );
 }
