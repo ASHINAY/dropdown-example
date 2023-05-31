@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 
-
 function App() {
   const [selectedName, setSelectedName] = useState('');
   const [selectCondition, setSelectCondition] = useState('');
@@ -13,9 +12,19 @@ function App() {
   const onStatusValueChange = (event) => {
     setSelectCondition(event.target.value);
   };
+
   const handleClear = () => {
     setSelectedName('');
     setSelectCondition('');
+  };
+
+  const handleChangetoFail = () => {
+    setSelectCondition('Fail');
+  };
+
+  const handleChangetoStevenandFail = () => {
+    setSelectedName('Steven');
+    setSelectCondition('Fail');
   };
 
   return (
@@ -41,6 +50,8 @@ function App() {
         Submit
       </button>
       <button style={{ width: "100px" }} onClick={handleClear}>Clear</button>
+      <button style={{ width: "100px" }} onClick={handleChangetoFail}>Change to Fail</button>
+      <button style={{ width: "100px" }} onClick={handleChangetoStevenandFail}>Change to Steven and Fail</button>
     </div>
   );
 }
